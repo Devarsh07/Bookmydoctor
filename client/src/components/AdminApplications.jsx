@@ -18,7 +18,7 @@ const AdminApplications = () => {
   const getAllApp = async (e) => {
     try {
       dispatch(setLoading(true));
-      const temp = await fetchData(`https://bookmydoctor-48n5.onrender.com/doctor/getnotdoctors`);
+      const temp = await fetchData(`https://bookmydoctor-xe4a.onrender.com/doctor/getnotdoctors`);
       setApplications(temp);
       dispatch(setLoading(false));
     } catch (error) {}

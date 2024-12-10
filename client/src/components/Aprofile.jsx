@@ -30,7 +30,7 @@ function Aprofile() {
   const getUser = async () => {
     try {
       dispatch(setLoading(true));
-      const temp = await fetchData(`https://bookmydoctor-48n5.onrender.com/user/getuser/${userId}`);
+      const temp = await fetchData(`https://bookmydoctor-xe4a.onrender.com/user/getuser/${userId}`);
       setFormDetails({
         ...temp,
         password: "",

@@ -19,7 +19,7 @@ const Users = () => {
   const getAllUsers = async () => {
     try {
       dispatch(setLoading(true));
-      let url = "https://bookmydoctor-48n5.onrender.com/user/getallusers";
+      let url = "https://bookmydoctor-xe4a.onrender.com/user/getallusers";
       if (filter !== "all") {
         url += `?filter=${filter}`;
       }
@@ -39,7 +39,7 @@ const Users = () => {
       const confirm = window.confirm("Are you sure you want to delete?");
       if (confirm) {
         await toast.promise(
-          axios.delete("https://bookmydoctor-48n5.onrender.com/user/deleteuser", {
+          axios.delete("https://bookmydoctor-xe4a.onrender.com/user/deleteuser", {
             headers: {
               authorization: `Bearer ${localStorage.getItem("token")}`,
             },

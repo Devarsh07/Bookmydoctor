@@ -23,7 +23,7 @@ const Appointments = () => {
     try {
       dispatch(setLoading(true));
       const temp = await fetchData(
-        `https://bookmydoctor-48n5.onrender.com/appointment/getallappointments?search=${userId}`
+        `https://bookmydoctor-xe4a.onrender.com/appointment/getallappointments?search=${userId}`
       );
       setAppointments(temp);
       dispatch(setLoading(false));
