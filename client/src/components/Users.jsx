@@ -19,7 +19,7 @@ const Users = () => {
   const getAllUsers = async () => {
     try {
       dispatch(setLoading(true));
-      let url = "http://65.1.91.15:5015/api/user/getallusers";
+      let url = "https://bookmydoctor-m0rd.onrender.com/api/user/getallusers";
       if (filter !== "all") {
         url += `?filter=${filter}`;
       }
@@ -39,7 +39,7 @@ const Users = () => {
       const confirm = window.confirm("Are you sure you want to delete?");
       if (confirm) {
         await toast.promise(
-          axios.delete("http://65.1.91.15:5015/api/user/deleteuser", {
+          axios.delete("https://bookmydoctor-m0rd.onrender.com/api/user/deleteuser", {
             headers: {
               authorization: `Bearer ${localStorage.getItem("token")}`,
             },

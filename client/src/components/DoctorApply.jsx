@@ -31,7 +31,7 @@ function DoctorApply() {
       }
       const { data } = await toast.promise(
         axios.post(
-          "http://65.1.91.15:5015/api/doctor/applyfordoctor",
+          "https://bookmydoctor-m0rd.onrender.com/api/doctor/applyfordoctor",
 
           {
             specialization,

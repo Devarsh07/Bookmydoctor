@@ -18,7 +18,7 @@ const AdminAppointments = () => {
   const getAllAppoint = async (e) => {
     try {
       dispatch(setLoading(true));
-      const temp = await fetchData(`http://65.1.91.15:5015/api/appointment/getallappointments`);
+      const temp = await fetchData(`https://bookmydoctor-m0rd.onrender.com/api/appointment/getallappointments`);
       setAppointments(temp);
       dispatch(setLoading(false));
     } catch (error) {}
@@ -32,7 +32,7 @@ const AdminAppointments = () => {
     try {
       await toast.promise(
         axios.put(
-          "http://65.1.91.15:5015/api/appointment/completed",
+          "https://bookmydoctor-m0rd.onrender.com/api/appointment/completed",
           {
             appointid: ele?._id,
             doctorId: ele?.doctorId._id,

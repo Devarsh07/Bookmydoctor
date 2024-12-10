@@ -83,7 +83,7 @@ function Aprofile() {
       }
       await toast.promise(
         axios.put(
-          "http://65.1.91.15:5015/api/user/updateprofile",
+          "https://bookmydoctor-m0rd.onrender.com/api/user/updateprofile",
           {
             firstname,
             lastname,

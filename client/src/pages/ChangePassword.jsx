@@ -26,7 +26,7 @@ function ChangePassword() {
   const getUser = async () => {
     try {
       dispatch(setLoading(true));
-      const temp = await fetchData(`http://65.1.91.15:5015/api/user/getuser/${userId}`);
+      const temp = await fetchData(`https://bookmydoctor-m0rd.onrender.com/api/user/getuser/${userId}`);
       setFormDetails({
         ...temp,
         password: "",
@@ -61,7 +61,7 @@ function ChangePassword() {
 
     try {
       const response = await axios.put(
-        "http://65.1.91.15:5015/api/user/changepassword",
+        "https://bookmydoctor-m0rd.onrender.com/api/user/changepassword",
         {
           userId: userId,
           currentPassword: password,

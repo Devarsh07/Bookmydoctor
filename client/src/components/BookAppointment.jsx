@@ -29,7 +29,7 @@ const BookAppointment = ({ setModalOpen, ele }) => {
     try {
       await toast.promise(
         axios.post(
-          "http://65.1.91.15:5015/api/appointment/bookappointment",
+          "https://bookmydoctor-m0rd.onrender.com/api/appointment/bookappointment",
           {
             doctorId: ele?.userId?._id,
             date: formDetails.date,
