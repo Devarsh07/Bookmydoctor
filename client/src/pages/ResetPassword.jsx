@@ -23,7 +23,7 @@ function ResetPassword() {
     }
 
     try {
-      const response = await axios.post(`/user/resetpassword/${id}/${token}`, { password }); //password: 12345
+      const response = await axios.post(`https://bookmydoctor-48n5.onrender.com/user/resetpassword/${id}/${token}`, { password }); //password: 12345
 
       if (response.status === 200) {
         toast.success("Password reset successfully");

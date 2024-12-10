@@ -43,7 +43,7 @@ function Login() {
       }
   
       const { data } = await toast.promise(
-        axios.post("/user/login", {
+        axios.post("https://bookmydoctor-48n5.onrender.com/user/login", {
           email,
           password,
           role,
@@ -68,7 +68,7 @@ function Login() {
 
   const getUser = async (id, role) => {
     try {
-      const temp = await fetchData(`/user/getuser/${id}`);
+      const temp = await fetchData(`https://bookmydoctor-48n5.onrender.com/user/getuser/${id}`);
       dispatch(setUserInfo(temp));
       if (role === "Admin") {
         return navigate("/dashboard/home");

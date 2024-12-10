@@ -21,7 +21,7 @@ const AdminDoctors = () => {
   const getAllDoctors = async () => {
     try {
       dispatch(setLoading(true));
-      let url = "/doctor/getalldoctors";
+      let url = "https://bookmydoctor-48n5.onrender.com/doctor/getalldoctors";
       if (filter !== "all") {
         url += `?filter=${filter}`;
       }
@@ -40,7 +40,7 @@ const AdminDoctors = () => {
       if (confirm) {
         await toast.promise(
           axios.put(
-            "/doctor/deletedoctor",
+            "https://bookmydoctor-48n5.onrender.com/doctor/deletedoctor",
             { userId },
             {
               headers: {

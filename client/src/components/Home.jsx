@@ -43,11 +43,11 @@ const Home = () => {
   const fetchDataCounts = async () => {
     try {
       dispatch(setLoading(true));
-      const userData = await fetchData("/user/getallusers");
+      const userData = await fetchData("https://bookmydoctor-48n5.onrender.com/user/getallusers");
       const appointmentData = await fetchData(
-        "/appointment/getallappointments"
+        "https://bookmydoctor-48n5.onrender.com/appointment/getallappointments"
       );
-      const doctorData = await fetchData("/doctor/getalldoctors");
+      const doctorData = await fetchData("https://bookmydoctor-48n5.onrender.com/doctor/getalldoctors");
       setUserCount(userData.length);
       setAppointmentCount(appointmentData.length);
       setDoctorCount(doctorData.length);

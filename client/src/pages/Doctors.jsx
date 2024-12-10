@@ -16,7 +16,7 @@ const Doctors = () => {
 
   const fetchAllDocs = async () => {
     dispatch(setLoading(true));
-    const data = await fetchData(`/doctor/getalldoctors`);
+    const data = await fetchData(`https://bookmydoctor-48n5.onrender.com/doctor/getalldoctors`);
     setDoctors(data);
     dispatch(setLoading(false));
   };

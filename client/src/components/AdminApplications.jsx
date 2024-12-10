@@ -18,7 +18,7 @@ const AdminApplications = () => {
   const getAllApp = async (e) => {
     try {
       dispatch(setLoading(true));
-      const temp = await fetchData(`/doctor/getnotdoctors`);
+      const temp = await fetchData(`https://bookmydoctor-48n5.onrender.com/doctor/getnotdoctors`);
       setApplications(temp);
       dispatch(setLoading(false));
     } catch (error) {}
@@ -30,7 +30,7 @@ const AdminApplications = () => {
       if (confirm) {
         await toast.promise(
           axios.put(
-            "/doctor/acceptdoctor",
+            "https://bookmydoctor-48n5.onrender.com/doctor/acceptdoctor",
             { id: userId },
             {
               headers: {
@@ -58,7 +58,7 @@ const AdminApplications = () => {
       if (confirm) {
         await toast.promise(
           axios.put(
-            "/doctor/rejectdoctor",
+            "https://bookmydoctor-48n5.onrender.com/doctor/rejectdoctor",
             { id: userId },
             {
               headers: {
