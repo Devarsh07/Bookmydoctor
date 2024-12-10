@@ -23,7 +23,7 @@ const Appointments = () => {
     try {
       dispatch(setLoading(true));
       const temp = await fetchData(
-        `https://bookmydoctor-xe4a.onrender.com/appointment/getallappointments?search=${userId}`
+        `http://65.1.91.15:5015/api/appointment/getallappointments?search=${userId}`
       );
       setAppointments(temp);
       dispatch(setLoading(false));
@@ -63,7 +63,7 @@ const Appointments = () => {
   const completeAppointment = async (appointment) => {
     try {
       await axios.put(
-        "https://bookmydoctor-48n5.onrender.com/appointment/completed",
+        "http://65.1.91.15:5015/api/appointment/completed",
         {
           appointid: appointment._id,
           doctorId: appointment.doctorId._id,

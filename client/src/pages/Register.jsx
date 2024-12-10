@@ -73,7 +73,7 @@ function Register() {
       }
   
       await toast.promise(
-        axios.post("https://bookmydoctor-xe4a.onrender.com/user/register", {
+        axios.post("]http://65.1.91.15:5015/api/user/register", {
           firstname,
           lastname,
           email,

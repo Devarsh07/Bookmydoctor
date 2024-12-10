@@ -30,7 +30,7 @@ function ForgotPassword() {
     }
 
     try {
-      const response = await axios.post("https://bookmydoctor-xe4a.onrender.com/user/forgotpassword", { email });
+      const response = await axios.post("http://65.1.91.15:5015/api/user/forgotpassword", { email });
       if (response.status === 200) {
         toast.success("Password reset email sent successfully!!!!!");
         navigate('/login'); 

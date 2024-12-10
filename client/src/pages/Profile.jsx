@@ -32,7 +32,7 @@ function Profile() {
   const getUser = async () => {
     try {
       dispatch(setLoading(true));
-      const temp = await fetchData(`https://bookmydoctor-xe4a.onrender.com/user/getuser/${userId}`);
+      const temp = await fetchData(`http://65.1.91.15:5015/api/user/getuser/${userId}`);
       setFormDetails({
         ...temp,
         password: "",

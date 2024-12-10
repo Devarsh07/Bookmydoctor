@@ -18,7 +18,7 @@ const AdminApplications = () => {
   const getAllApp = async (e) => {
     try {
       dispatch(setLoading(true));
-      const temp = await fetchData(`https://bookmydoctor-xe4a.onrender.com/doctor/getnotdoctors`);
+      const temp = await fetchData(`http://65.1.91.15:5015/api/doctor/getnotdoctors`);
       setApplications(temp);
       dispatch(setLoading(false));
     } catch (error) {}
@@ -30,7 +30,7 @@ const AdminApplications = () => {
       if (confirm) {
         await toast.promise(
           axios.put(
-            "https://bookmydoctor-48n5.onrender.com/doctor/acceptdoctor",
+            "http://65.1.91.15:5015/api/doctor/acceptdoctor",
             { id: userId },
             {
               headers: {
@@ -58,7 +58,7 @@ const AdminApplications = () => {
       if (confirm) {
         await toast.promise(
           axios.put(
-            "https://bookmydoctor-48n5.onrender.com/doctor/rejectdoctor",
+            "http://65.1.91.15:5015/api/doctor/rejectdoctor",
             { id: userId },
             {
               headers: {

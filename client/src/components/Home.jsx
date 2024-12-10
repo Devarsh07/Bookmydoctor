@@ -43,11 +43,11 @@ const Home = () => {
   const fetchDataCounts = async () => {
     try {
       dispatch(setLoading(true));
-      const userData = await fetchData("https://bookmydoctor-xe4a.onrender.com/user/getallusers");
+      const userData = await fetchData("http://65.1.91.15:5015/api/user/getallusers");
       const appointmentData = await fetchData(
-        "https://bookmydoctor-xe4a.onrender.com/appointment/getallappointments"
+        "http://65.1.91.15:5015/api/appointment/getallappointments"
       );
-      const doctorData = await fetchData("https://bookmydoctor-xe4a.onrender.com/doctor/getalldoctors");
+      const doctorData = await fetchData("http://65.1.91.15:5015/api/doctor/getalldoctors");
       setUserCount(userData.length);
       setAppointmentCount(appointmentData.length);
       setDoctorCount(doctorData.length);

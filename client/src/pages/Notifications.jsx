@@ -19,7 +19,7 @@ const Notifications = () => {
   const getAllNotif = async () => {
     try {
       dispatch(setLoading(true));
-      const temp = await fetchData(`https://bookmydoctor-xe4a.onrender.com/notification/getallnotifs?page=${currentPage - 1}&limit=${notificationsPerPage}`);
+      const temp = await fetchData(`http://65.1.91.15:5015/api/notification/getallnotifs?page=${currentPage - 1}&limit=${notificationsPerPage}`);
       dispatch(setLoading(false));
       setNotifications(temp);
     } catch (error) {
