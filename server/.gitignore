@@ -108,5 +108,4 @@ dist
 /client/.vscode
 
 
-# files
-/routes/paymentRoutes.js
+#
