@@ -31,7 +31,7 @@ const Navbar = () => {
     <header>
       <nav className={iconActive ? "nav-active" : ""}>
         <h2 className="nav-logo">
-          <NavLink to={"/"}>bookMyDoc</NavLink>
+          <NavLink to={"/"}>DoctorConnect</NavLink>
         </h2>
         <ul className="nav-links">
           <li>

@@ -48,7 +48,7 @@ const ApplyDoctor = () => {
 
       navigate("/");
     } catch (error) {
-      return error;
+      return "not fouind";
     }
   };
 

@@ -10,6 +10,7 @@ import { Protected, Public, Admin } from "./middleware/route";
 import React, { lazy, Suspense } from "react";
 import Loading from "./components/Loading";
 import Dashboard from "./pages/Dashboard";
+// import Payment from "./pages/Payment";
 
 const Aprofile = lazy(()=>import("./components/Aprofile"))
 const Home = lazy(() => import("./pages/Home"));
@@ -21,6 +22,7 @@ const DasHome = lazy(() => import("./components/Home"));
 const Notifications = lazy(() => import("./pages/Notifications"));
 const ApplyDoctor = lazy(() => import("./pages/ApplyDoctor"));
 const Error = lazy(() => import("./pages/Error"));
+{/* <Route path="/payment" element={<Payment />} /> */}
 
 function App() {
   const [userRole, setUserRole] = useState("");
@@ -51,6 +53,14 @@ function App() {
               </Protected>
             }
           />
+          {/* <Route
+            path="/payment"
+            element={
+              <Protected>
+                <Payment />
+              </Protected>
+            }
+          /> */}
           <Route
             path="/notifications"
             element={
