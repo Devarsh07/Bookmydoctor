@@ -29,7 +29,7 @@ const ApplyDoctor = () => {
     try {
       await toast.promise(
         axios.post(
-          "https://bookmydoctor-m0rd.onrender.com/api/doctor/applyfordoctor",
+          "/api/doctor/applyfordoctor",
           {
             formDetails,
           },
